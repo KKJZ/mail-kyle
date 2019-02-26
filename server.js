@@ -51,7 +51,7 @@ app.post('/send', jsonParser, (req,res,next) => {
 
 let server;
 
-function runServer(port = 3000 || process.env.PORT) {
+function runServer(port = process.env.PORT || 3000) {
     server = app.listen(port, () => {
         console.log(`Server is listening on PORT: ${port}`);
     })
